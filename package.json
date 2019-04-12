@@ -1,8 +1,8 @@
 {
   "name": "Tasker",
-  "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "https://ionicframework.com/",
+  "version": "0.2.0",
+  "author": "Faizaan Datoo",
+  "homepage": "https://faizaand.com/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -55,5 +55,5 @@
     "tslint": "~5.12.0",
     "typescript": "~3.1.6"
   },
-  "description": "An Ionic project"
+  "description": "A task manager for humans."
 }
