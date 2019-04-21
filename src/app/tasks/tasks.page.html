@@ -31,25 +31,10 @@
       <ion-list-header>
         <ion-label>Categories</ion-label>
       </ion-list-header>
-      <ion-item (click)="viewCategory('schoolwork')" detail="true">
-        <ion-label>Schoolwork</ion-label>
-        <ion-badge color="warning" slot="start">&nbsp;</ion-badge>
-        <ion-badge color="light">8</ion-badge>
-      </ion-item>
-      <ion-item (click)="viewCategory('personalprojects')" detail="true">
-        <ion-label>Personal projects</ion-label>
-        <ion-badge color="success" slot="start">&nbsp;</ion-badge>
-        <ion-badge color="light">3</ion-badge>
-      </ion-item>
-      <ion-item (click)="viewCategory('housework')" detail="true">
-        <ion-label>Housework</ion-label>
-        <ion-badge color="danger" slot="start">&nbsp;</ion-badge>
-        <ion-badge color="light">1</ion-badge>
-      </ion-item>
-      <ion-item (click)="viewCategory('recreation')" detail="true">
-        <ion-label>Recreation</ion-label>
-        <ion-badge color="tertiary" slot="start">&nbsp;</ion-badge>
-        <ion-badge color="light">0</ion-badge>
+      <ion-item *ngFor="let category of categories" (click)="viewCategory(category.slug)" detail="true">
+        <ion-label>{{category.title}}</ion-label>
+        <ion-badge color="{{category.color}}" slot="start" mode="ios">&nbsp;</ion-badge>
+        <ion-badge color="light">{{category.num}}</ion-badge>
       </ion-item>
     </ion-list>
 

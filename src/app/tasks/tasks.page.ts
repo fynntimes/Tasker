@@ -10,10 +10,37 @@ export class TasksPage {
 
   numUncategorized = 32;
 
-  constructor(public nav: NavController) {
+  categories = [
+    {
+      slug: 'schoolwork',
+      title: 'Schoolwork',
+      color: 'warning',
+      num: '8'
+    },
+    {
+      slug: 'personal_projects',
+      title: 'Personal Projects',
+      color: 'secondary',
+      num: '3'
+    },
+    {
+      slug: 'housework',
+      title: 'Housework',
+      color: 'danger',
+      num: '1'
+    },
+    {
+      slug: 'recreation',
+      title: 'Recreation',
+      color: 'tertiary',
+      num: '8'
+    }
+  ]
+
+  constructor(private nav: NavController) {
   }
 
-  viewCategory(cat) {
+  viewCategory(cat: string) {
     this.nav.navigateForward('/tabs/tasks/category/' + cat)
   }
 
