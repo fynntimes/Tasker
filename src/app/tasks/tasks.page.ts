@@ -5,4 +5,11 @@ import { Component } from '@angular/core';
   templateUrl: 'tasks.page.html',
   styleUrls: ['tasks.page.scss']
 })
-export class TasksPage {}
+export class TasksPage {
+
+  numUncategorized = 32;
+
+  constructor() {
+  }
+
+}
