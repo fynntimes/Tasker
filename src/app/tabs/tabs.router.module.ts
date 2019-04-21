@@ -13,6 +13,10 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: '../tasks/tasks.module#TasksPageModule'
+          },
+          {
+            path: 'category/:slug',
+            loadChildren: '../tasks/category/category.module#CategoryPageModule'
           }
         ]
       },

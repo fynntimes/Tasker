@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tasks',
@@ -9,7 +10,11 @@ export class TasksPage {
 
   numUncategorized = 32;
 
-  constructor() {
+  constructor(public nav: NavController) {
+  }
+
+  viewCategory(cat) {
+    this.nav.navigateForward('/tabs/tasks/category/' + cat)
   }
 
 }

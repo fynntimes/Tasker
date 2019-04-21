@@ -1,3 +1,4 @@
+import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoryPage implements OnInit {
 
-  constructor() { }
+  slug: string;
+
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.slug = this.route.snapshot.paramMap.get('slug');
   }
 
 }
